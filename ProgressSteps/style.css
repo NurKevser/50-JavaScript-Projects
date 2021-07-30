@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:rgb(214, 210, 210);
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.container{
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+    font-size: 1.5rem;
+}
+.progress-container::before {
+    content: "";
+    background-color: #bdbdbd;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 50%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+.progress {
+    background-color: #61dbfb;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 50%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
