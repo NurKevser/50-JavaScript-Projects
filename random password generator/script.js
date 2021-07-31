@@ -14,8 +14,18 @@ function generator() {
 
 button.addEventListener("click", () =>{
     display.value = generator();
+    console.log(display.value);
 });
 
-function copy(){
+copyBtn.onclick = function (){
+  display.select();
+  document.execCommand('Copy');
+ /*  if(document.execCommand('Copy')){
+    copyBtn.classList.remove("far");
+    copyBtn.classList.remove("fa copy");
     
+    copyBtn.classList.add("fas");
+    copyBtn.classList.add("fa copy");
+
+  } */
 }
