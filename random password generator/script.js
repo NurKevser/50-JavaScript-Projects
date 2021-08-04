@@ -14,18 +14,16 @@ function generator() {
 
 button.addEventListener("click", () =>{
     display.value = generator();
-    console.log(display.value);
+    // console.log(display.value);
+    copyBtn.style.display = 'inline';
+    copyActive.style.display = 'none';
 });
+
 
 copyBtn.onclick = function (){
   display.select();
   document.execCommand('Copy');
- /*  if(document.execCommand('Copy')){
-    copyBtn.classList.remove("far");
-    copyBtn.classList.remove("fa copy");
-    
-    copyBtn.classList.add("fas");
-    copyBtn.classList.add("fa copy");
-
-  } */
+  
+  copyBtn.style.display = 'none';
+  copyActive.style.display = 'inline';
 }
